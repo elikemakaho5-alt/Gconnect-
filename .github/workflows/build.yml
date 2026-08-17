@@ -18,10 +18,10 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Build with Gradle
+    - name: Validate Gradle Wrapper
       uses: gradle/actions/setup-gradle@v3
 
-    - name: Compile Debug APK
+    - name: Build with Gradle
       run: gradle assembleDebug
 
     - name: Upload APK Artifact
